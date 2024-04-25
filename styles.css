@@ -1,0 +1,135 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #ff0;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.current-score,
+.high-score {
+  font-size: 1rem;
+  margin: 0 1rem;
+  text-shadow: 0 0 10px #ff0;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.red {
+  background-color: #f00;
+}
+
+.green {
+  background-color: #0f0;
+}
+
+.blue {
+  background-color: #00f;
+}
+
+.yellow {
+  background-color: #ff0;
+}
+
+.pressed {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.game-over {
+  animation: game-over 0.2s infinite;
+}
+
+#start-btn,
+#restart-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff0;
+  color: #222;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+#game-over-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  padding: 2rem;
+  border: 5px solid #ff0;
+  text-align: center;
+}
+
+#game-over-screen h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #ff0;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes game-over {
+  0% {
+    background-color: #222;
+  }
+  50% {
+    background-color: #f00;
+  }
+  100% {
+    background-color: #222;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btn {
+    width: 100px;
+    height: 100px;
+  }
+}

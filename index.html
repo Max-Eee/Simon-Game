@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Simon Game</h1>
+    <div class="score-container">
+      <div class="current-score">
+        <span>Score: </span>
+        <span id="current-score">0</span>
+      </div>
+      <div class="high-score">
+        <span>High Score: </span>
+        <span id="high-score">0</span>
+      </div>
+    </div>
+    <div class="game-board">
+      <div type="button" id="green" class="btn green"></div>
+      <div type="button" id="red" class="btn red"></div>
+      <div type="button" id="yellow" class="btn yellow"></div>
+      <div type="button" id="blue" class="btn blue"></div>
+    </div>
+    <button id="start-btn">Start</button>
+    <div id="game-over-screen" class="hidden">
+      <h2>Game Over</h2>
+      <button id="restart-btn">Restart</button>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
